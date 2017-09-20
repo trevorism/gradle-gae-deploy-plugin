@@ -13,7 +13,7 @@ class AppengineXmlParserTest {
         assert deploy
         assert deploy.application == "trevorism-gcloud"
         assert deploy.version == "1"
-        assert deploy.service == "email"
+        assert deploy.service == "notRealService"
     }
 
     @Test
@@ -32,7 +32,7 @@ class AppengineXmlParserTest {
     <runtime>java8</runtime>
     <application>trevorism-gcloud</application>
     <version>1</version>
-    <service>email</service>
+    <service>notRealService</service>
     <threadsafe>true</threadsafe>
 </appengine-web-app>
 """

@@ -10,8 +10,8 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
-        flatDir {
-            dirs ('C:\\dev\\gradle-gae-deploy-plugin\\build\\libs', 'C:\\dev\\eventhub-client\\build\\libs', 'C:\\dev\\http-utils\\build\\libs')
+        maven {
+            url uri("http://trevor.eastus.cloudapp.azure.com/nexus/content/repositories/releases")
         }
     }
 	dependencies {
