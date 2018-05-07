@@ -1,8 +1,8 @@
 package com.trevorism.deploy.plugin.tasks
 
 import com.trevorism.deploy.plugin.util.Deploy
-import com.trevorism.event.DefaultEventProducer
 import com.trevorism.event.EventProducer
+import com.trevorism.event.PingingEventProducer
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 
@@ -18,7 +18,7 @@ class SendEvent extends DefaultTask{
     @TaskAction
     void sendEvent(){
         Deploy deploy = new Deploy(application, service, version)
-        EventProducer<Deploy> producer = new DefaultEventProducer<Deploy>()
+        EventProducer<Deploy> producer = new PingingEventProducer<Deploy>()
         producer.sendEvent("deploy", deploy)
 
     }

@@ -3,7 +3,7 @@ plugins{
     id "jacoco"
     id "maven-publish"
 }
-version = "1.1"
+version = "1.1.1"
 
 repositories {
 	mavenCentral()
@@ -17,9 +17,9 @@ repositories {
 
 dependencies {
 	compile gradleApi()
-    compile 'com.trevorism:eventhub-client:1.0.0'
+    compile 'com.trevorism:eventhub-client:1.4.0'
 
-	compile 'org.codehaus.groovy:groovy-all:2.4.11'
+	compile 'org.codehaus.groovy:groovy-all:2.4.12'
 	testCompile 'junit:junit:4.12'
 }
 

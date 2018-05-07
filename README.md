@@ -15,15 +15,12 @@ buildscript {
         }
     }
 	dependencies {
-        classpath ':eventhub-client:1.0.0'
-        classpath ':http-utils:1.0.0'
-        classpath 'org.apache.httpcomponents:httpclient:4.5.3'
-        classpath ':gradle-gae-deploy-plugin:1.0'
+        classpath ':gradle-gae-deploy-plugin:1.1.1'
     }
 }
 
-apply plugin: "com.trevorism.gradle.acceptance"
+apply plugin: "com.trevorism.gradle.gae.deploy"
 ```
 
 Run with:
-`gradle acceptanceTest`
+`gradle appengineDeploy`
