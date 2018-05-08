@@ -15,9 +15,6 @@ class DeployPluginTest {
     void testApply() {
         Project project = newProject()
         assert project.tasks.findByPath("sendDeployEvent") instanceof SendEvent
-
-        project.tasks.sendDeployEvent.execute()
-
     }
 
     static Project newProject(){
