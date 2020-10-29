@@ -12,7 +12,7 @@ buildscript {
         }
     }
 	dependencies {
-        classpath 'com.trevorism:gradle-gae-deploy-plugin:1.1.1'
+        classpath 'com.trevorism:gradle-gae-deploy-plugin:1.2.0'
     }
 }
 
