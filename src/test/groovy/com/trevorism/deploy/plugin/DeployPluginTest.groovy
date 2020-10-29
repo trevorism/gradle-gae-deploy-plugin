@@ -19,7 +19,7 @@ class DeployPluginTest {
 
     static Project newProject(){
         Project project = ProjectBuilder.builder().withName("foo").build()
-        String path = "${project.projectDir.path}/src/main/webapp/WEB-INF/"
+        String path = "${project.projectDir.path}/src/main/webapp/WEB-INF"
         new File(path).mkdirs()
         new File("${path}/appengine-web.xml") << AppengineXmlParserTest.sampleXml()
         project.with {

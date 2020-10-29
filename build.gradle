@@ -37,3 +37,12 @@ dependencies {
 }
 
 check.dependsOn "jacocoTestReport"
+
+processResources{
+    doLast{
+        copy{
+            from "${System.getProperty("user.home")}/${project.name}/secrets.properties"
+            into "build/resources/main"
+        }
+    }
+}
