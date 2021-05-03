@@ -2,7 +2,7 @@ buildscript {
     repositories {
         mavenCentral()
         maven {
-            url uri("http://trevorism-build.eastus.cloudapp.azure.com/nexus/repository/maven-releases")
+            url uri("https://trevorism-build.eastus.cloudapp.azure.com/nexus/repository/maven-releases")
         }
     }
     dependencies {
@@ -10,7 +10,7 @@ buildscript {
     }
 }
 
-plugins{
+plugins {
     id "groovy"
     id "jacoco"
 }
@@ -23,24 +23,24 @@ repositories {
         url "https://plugins.gradle.org/m2"
     }
     maven {
-        url uri("http://trevorism-build.eastus.cloudapp.azure.com/nexus/repository/maven-releases")
+        url uri("https://trevorism-build.eastus.cloudapp.azure.com/nexus/repository/maven-releases")
     }
 }
 
 dependencies {
-	implementation gradleApi()
+    implementation gradleApi()
     implementation 'com.trevorism:eventhub-client:2.3.0'
     implementation 'com.trevorism:secure-http-utils:0.5.0'
 
-    implementation 'org.codehaus.groovy:groovy-all:2.5.13'
-	testImplementation 'junit:junit:4.13.1'
+    implementation 'org.codehaus.groovy:groovy-all:3.0.7'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 check.dependsOn "jacocoTestReport"
 
-processResources{
-    doLast{
-        copy{
+processResources {
+    doLast {
+        copy {
             from "${System.getProperty("user.home")}/${project.name}/secrets.properties"
             into "build/resources/main"
         }
