@@ -1,6 +1,5 @@
 package com.trevorism.deploy.plugin.util
 
-import groovy.xml.XmlSlurper
 /**
  * @author tbrooks
  */
